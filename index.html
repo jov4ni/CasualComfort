@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Sistema de controle de saída</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#relatorios">Relatorios</a></li>
+                <li><a href="#produção">Produção</a></li>
+                <li><a href="#suporte">Suporte</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section class="form-comand">
+                <h2>Gerar relatório para envio</h2>
+                <input id="input-txt" type="text" required>
+                <button id="btn-add" onclick="adcionar()">Adcionar</button>
+                <button id="btn-del" onclick="desfazer()">Desfazer</button>
+                <button id="btn-imp"onclick="imprimir()">Imprimir</button>
+        </section>
+        <hr>
+        <section class="form-main">
+            <div class="fundo-relatorio">
+                <p id="relatorio">Relatório de envio ------- </p>
+            </div>
+            <p class="fecho" id="fecho"></p>
+        </section>
+        <p>F5: refazer; CTRL + f: procurar; enter ou espaço: adicionar</p>
+    </div>
+    <footer>
+        <p>&copy; Casual Comfort - 2025. Todos os direitos reservados.
+        </p>
+    </footer>
+</body>
+</html>

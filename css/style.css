@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    color: #333;
+}
+/* ------------ CABEÇALHO ------------ */
+header {
+    background-color: #A950B4;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+    nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+/* ------------ CONTEUDO ------------ */
+.container{
+    width: 80%;
+    margin: 2rem auto;
+    min-height: 60vh;
+}
+.form-comand{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.form-comand input{
+    padding: 0.5rem;
+    width: 33%;
+}
+.form-comand button{
+    padding: 0.5rem;
+    width: 5rem;
+    background-color: silver;
+}
+
+.form-main{
+    background-color: silver;
+    padding: 10px;
+    color: rgb(1, 5, 40);
+}
+
+.fundo-relatorio{
+    margin: 50px;
+}
+.fecho{
+    margin: 50px;
+}
+
+/* ------------ RODAPE ------------ */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+}
