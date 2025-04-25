@@ -56,6 +56,10 @@ nav ul li {
 .fecho{
     margin: 50px;
 }
+.dicas{
+    color: dimgray;
+    font-size: small;
+}
 
 /* ------------ RODAPE ------------ */
 
@@ -65,4 +69,23 @@ footer {
     text-align: center;
     padding: 1rem 0;
     width: 100%;
+}
+@media (max-width: 540px){
+
+    body{
+        font-size: small;
+    }
+    .form-comand button{
+        display: block;
+        margin: 10px;
+    }
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .form-comand input{
+        padding: 0.5rem;
+        margin: 10px;
+        width: 50%;
+    }
 }
