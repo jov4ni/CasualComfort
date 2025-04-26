@@ -2,9 +2,6 @@ const data = new Date();
 const diasDaSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sabado'];
 let codigos = [];
 let total=0;
-let produto ={
-    nome: 'produto a cadastrar'
-};
 
 window.onload = function() {
     document.getElementById("input-txt").focus();
@@ -24,6 +21,8 @@ function adcionar(){
 
     if (codigo === "") {
         alert("O campo está vazio! Adicione um código.");
+        document.getElementById('input-txt').value = '';
+        document.getElementById("input-txt").focus();
         return;
     }
     for(let i in codigos){
@@ -42,7 +41,7 @@ function adcionar(){
     document.getElementById("btn-imp").disabled = false;
     total++;
     document.getElementById("total").innerHTML = `Total de etiquetas: ${total}`;
-    console.log(codigos);
+    console.log("Todos itens atuais depois de adicionar:", codigos);
     return total;
 }
 
@@ -52,7 +51,7 @@ function desfazer(){
         paragrafos[paragrafos.length -1].remove();
         codigos.pop();
         total--;
-        console.log(codigos);
+        console.log("Todos itens atuais depois de remover:", codigos);
         if(paragrafos.length ==2){
             document.getElementById("btn-del").disabled = true;
             document.getElementById("btn-imp").disabled = true;
@@ -92,19 +91,19 @@ function telaimprimir(){
                 color: #003366;
             }
             table{
-                padding: 30px;
+                padding: 20px;
                 color: #003366;
                 width: 100%;
                 margin: 2rem auto;
                 }
             table tr td{
                 padding: 10px;
+                text-align: center;
             }
 
             h2 {
             text-align: center;
             }
-
             @media print {
                 button {
                     display: none;
@@ -114,7 +113,7 @@ function telaimprimir(){
                     padding: 0;
                 }
             };</style>`);
-        janelaImpressao.document.write("<body><h2>Relatório de envio</h2><h3>Códigos:<table>");
+        janelaImpressao.document.write("<body><h2>Relatório de envio</h2><h3>Códigos:</h3><table>");
         
         let copiaarray =[];
         for(let i=1; i < conteudo.length; i++){
